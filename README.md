@@ -33,30 +33,31 @@ select a.Symbol, assetname, description from stock a join asset b on a.Symbol = 
 ___________________________________________________________________________________________________________________________________________________________________________
 Look at financial metrics of the technology sector  
 
-
-select Symbol, MarketCapitalization, EBITDA, PERatio, BookValue, DividendYield, EPS, RevenueTTM, TrailingPE, ForwardPE from stock a join Sector b on a.Sectorid = b.Sectorid where SectorDesc = 'TECHNOLOGY';  
+```console
+select Symbol, MarketCapitalization, EBITDA, PERatio, BookValue, DividendYield, EPS, RevenueTTM, TrailingPE, ForwardPE from stock a join Sector b on a.Sectorid = b.Sectorid where SectorDesc = 'TECHNOLOGY';
+```
 ![exq2](https://github.com/edwardedwardedward3/Financial-db/assets/90068254/e47ca118-7070-4b3b-852e-0548cf531ea3)  
 
 
-
+___________________________________________________________________________________________________________________________________________________________________________
 Look at dividend yields of cigarette companies  
 
-
+```console
 select Symbol, DividendYield from stock a join Industries b on a.Industryid = b.Industryid where IndustryDesc='CIGARETTES';  
-
-
+```
+___________________________________________________________________________________________________________________________________________________________________________
 Look at P/E ratios of mining and gold and silver ore producing companies  
 
-
+```console
 select Symbol, PERatio from stock a join Industries b on a.Industryid = b.Industryid where IndustryDesc = 'METAL MINING' or IndustryDesc = 'MINING & QUARRYING OF NONMETALLIC MINERALS (NO FUELS)' or IndustryDesc = 'GOLD AND SILVER ORES';  
-
+```
 ![exq3](https://github.com/edwardedwardedward3/Financial-db/assets/90068254/d6140712-1c27-4626-9d0d-bbc93992b294)  
-
+___________________________________________________________________________________________________________________________________________________________________________
 Look at financial metrics of the energy sector  
 
-
+```console
 select Symbol, MarketCapitalization, EBITDA, PERatio, BookValue, DividendYield, EPS, RevenueTTM, TrailingPE, ForwardPE from stock a join Sector b on a.Sectorid = b.Sectorid where SectorDesc = 'ENERGY & TRANSPORTATION';  
-
+```
 ![exq4](https://github.com/edwardedwardedward3/Financial-db/assets/90068254/7891a593-210d-4ee8-b8ff-f63db659fcf2)
 
 
