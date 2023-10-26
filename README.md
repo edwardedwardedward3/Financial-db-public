@@ -1,25 +1,36 @@
 # Financial-db
 Creating the database  
 
-Step 1. Start a RDBMS. In the demo I use mysql.  
+Step 1. Start mysql.  
 
-Step 2. Run the create-fin-tables.sql script  
+Step 2. Run the create-fin-tables.sql script:
+```console
+source create-fin-tables.sql
+```
 
 ![step1](https://github.com/edwardedwardedward3/Financial-db/assets/90068254/dd8888c3-2b3a-48a9-bf26-ddedc3224c3a)  
 
-Step 3. Run the populatecats.sql script. This should take less than 10 seconds to complete.  
+Step 3. Run the populatecats.sql script. This should take less than 10 seconds to complete:
+```console
+source populatecats.sql
+```
 There are 7 Sectors and 183 Industries currently.  
 ![step2](https://github.com/edwardedwardedward3/Financial-db/assets/90068254/d748b261-a2e5-467d-b019-8d7253c9b356)  
 
-Step 4. Run the populatestocks.sql script. This should take less than 30 seconds.  
-## At this point the database is built. The demo will continue to show some example queries.  
+Step 4. Run the populatestocks.sql script. This should take less than 30 seconds:
+```console
+source populatestocks.sql
+```
+## At this point the database is built. Example queries:  
 There are just short of 500 stocks currently.  
 
 This query will give us a general overview of the companies.  
-
-select a.Symbol, assetname, description from stock a join asset b on a.Symbol = b.Symbol limit 10;  
+```console
+select a.Symbol, assetname, description from stock a join asset b on a.Symbol = b.Symbol limit 10;
+```
 ![exq1](https://github.com/edwardedwardedward3/Financial-db/assets/90068254/ab870970-4ac7-49f1-89ab-c850eef66553)  
 
+___________________________________________________________________________________________________________________________________________________________________________
 Look at financial metrics of the technology sector  
 
 
